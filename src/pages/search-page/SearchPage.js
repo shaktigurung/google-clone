@@ -11,14 +11,15 @@ import LocalOfferIcon from '@material-ui/icons/LocalOffer';
 import RoomIcon from '@material-ui/icons/Room';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
 import { Link } from 'react-router-dom';
+import SearchOnResult from '../../components/search-on-result/SearchOnResult';
 
 function SearchPage() {
     const [ { term }, dispatch ] = useStateValue();
     //Live API call
-    const { data } = useGoogleSearch(term);
+    //const { data } = useGoogleSearch(term);
 
     //Mock API call
-    // const data = Response;
+    const data = Response;
 
     console.log("this is data", data);
     return (
@@ -28,8 +29,7 @@ function SearchPage() {
                     <img className="searchPage__logo" src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png" alt="google logo" />
                 </Link>
                 <div className="searchPage__headerBody">
-                    <Search hideButtons />
-
+                    <SearchOnResult />
                     <div className="searchPage__options">
                         <div className="searchPage__optionsLeft">
                             <div className="searchPage__option">
