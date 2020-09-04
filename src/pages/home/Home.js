@@ -25,7 +25,22 @@ function Home() {
                 <div className="home__body__inputContainer">
                     <Search />
                 </div>
-            </div>   
+            </div> 
+            <div className="home__footerTop">
+                <p> Australia </p>
+            </div>
+            <div className="home__footer">
+                <div className='home__footerLeft'>
+                    <Link to='/advertising'>Advertising</Link>
+                    <Link to='/business'>Business</Link>
+                    <Link to='/how-search-work'>How Search works</Link>
+                </div>
+                <div className='home__footerRight'>
+                    <Link to='/privacy'>Privacy</Link>
+                    <Link to='/terms'>Terms</Link>
+                    <Link to='/settings'>Settings</Link>
+                </div>
+            </div>
         </div>
     )
 }

@@ -4,21 +4,21 @@
     height: 100vh;
 }
 
-.home__header {
+.home__header, .home__footer {
     display: flex;
     justify-content: space-between;
     padding: 20px 30px;
     align-items: center;
 }
 
-.home__header a {
+.home__header a, .home__footer a {
    margin-right: 20px;
    text-decoration: inherit;
    color: rgba(0,0,0,0.87);
    font-size: 15px; 
 }
 
-.home__header a:hover {
+.home__header a:hover, .home__footer a:hover  {
     text-decoration: underline;
 }
 
@@ -43,4 +43,12 @@
 .home__body > img {
     object-fit: contain;
     height: 100px;
+}
+
+.home__footer {
+    background-color: #F2F2F2;
+}
+.home__footerTop {
+    padding: 10px 30px;
+    background-color: #F2F2F2;
 }

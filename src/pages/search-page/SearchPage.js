@@ -15,10 +15,11 @@ import { Link } from 'react-router-dom';
 function SearchPage() {
     const [ { term }, dispatch ] = useStateValue();
     //Live API call
-   // const { data } = useGoogleSearch(term);
+    const { data } = useGoogleSearch(term);
 
     //Mock API call
-    const data = Response;
+    // const data = Response;
+
     console.log("this is data", data);
     return (
         <div className="searchPage">
@@ -67,12 +68,12 @@ function SearchPage() {
                     </div>
                 </div>
             </div>
-            { true && (
+            { term && (
                 <div className="searchPage__results">
                     <p className="searchPage__resultCount">
                         About {data && data.searchInformation ? data.searchInformation.formattedTotalResults : null } results ( { data && data.searchInformation ? data.searchInformation.formattedSearchTime : null } seconds) for {term}
                     </p>
-                    { data.items.map( item => (
+                    { data && data.items && data.items.map( item => (
                         <div className="searchPage__result">
                             <a href={item.link}>
                                 {item.pagemap && item.pagemap.cse_image && item.pagemap.cse_image.length > 0 ? item.pagemap.cse_image[0].src && (
